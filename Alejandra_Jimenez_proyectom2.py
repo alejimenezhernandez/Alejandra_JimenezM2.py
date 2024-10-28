@@ -23,3 +23,21 @@ def solicitar_una_palabra():  #Se indica la función incial del programa
 solicitar_una_palabra() # Se llama a la función incial
         
 
+def identificar_cuadrante(x, y): #Se indica la función del programa
+    if x == 0 or y == 0: # Se establece que las coordenadas no deben ser igual a 0
+        return "Las coordenadas no deben ser igual 0." # En case de una ser 0 mediante la función return se pide se indique al uuario
+    #Se establecen los parametros para identificar en que cuadrante estaran y se imprima de acuerdo al que corresponda
+    if x > 0 and y > 0:
+        return f"Los puntos ({x},{y}) se encuentra en el primer cuadrante."
+    elif x < 0 and y > 0:
+        return f"Los puntos ({x},{y}) se encuentra en segundo cuadrante."
+    elif x < 0 and y < 0:
+        return f"Los puntos ({x},{y}) se encuentra en el tercer cuadrante."
+    elif x > 0 and y < 0:
+        return f"Los puntos ({x},{y}) se encuentra en el cuarto cuadrante."
+    
+x = float(input("Ingresa la coordenada x: ")) #Se pide ingresar la Coordenada x
+y = float(input("Ingresa la coordenada y: ")) #Se pide ingresar la Coordenada y
+
+resultado = identificar_cuadrante(x, y) # Se establece el resultado sera lo que se ingrese como x , y
+print (resultado) #Se pide se imprima el resultado de acuerdo a los parametros establecidos
